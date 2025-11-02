@@ -47,7 +47,7 @@
 1. Clone the repository  
    ```bash
    git clone https://github.com/tejaspawade/chatSphere.git
-   cd chatSphere
+   cd chatApp
 2. Review configuration in appsettings.json (and appsettings.Development.json) to ensure any required settings (e.g., connection strings, hub endpoints) are correct.
 3. Restore dependencies and build the project
    ```bash
