@@ -12,10 +12,6 @@
   - [Installation & Setup](#installation-&-setup)  
   - [Running the Application](#running-the-application)  
 - [Project Structure](#project-structure)  
-- [Usage](#usage)  
-- [Contributing](#contributing)  
-- [License](#license)  
-- [Contact / Author](#contact--author)
 
 ## Demo / Screenshot
 
@@ -61,7 +57,8 @@
    ```bash
    dotnet run --project path/to/ChatApp.csproj
 
-### Project Structure
+
+ ## Project Structure
   ```bash
   chatSphere/
   ├── Controllers/        # MVC Controllers  
