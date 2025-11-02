@@ -51,3 +51,26 @@
    ```bash
    git clone https://github.com/tejaspawade/chatSphere.git
    cd chatSphere
+2. Review configuration in appsettings.json (and appsettings.Development.json) to ensure any required settings (e.g., connection strings, hub endpoints) are correct.
+3. Restore dependencies and build the project
+   ```bash
+   dotnet restore
+   dotnet build
+
+### Running the Application
+   ```bash
+   dotnet run --project path/to/ChatApp.csproj
+
+### Project Structure
+  ```bash
+  chatSphere/
+  ├── Controllers/        # MVC Controllers  
+  ├── Hubs/               # SignalR hubs  
+  ├── Models/             # Domain/data models  
+  ├── Services/           # Business logic and abstractions  
+  ├── Views/              # Front-end views (HTML/CSS/JS)  
+  ├── Properties/  
+  ├── wwwroot/            # Static assets (css/js/images)  
+  ├── ChatApp.csproj  
+  └── Program.cs  
+
