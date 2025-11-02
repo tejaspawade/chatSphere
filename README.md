@@ -1,4 +1,4 @@
-# chatSphere
+# ChatSphere
 
 **chatSphere** is a real-time chat application built using ASP.NET Core (C#) and SignalR. It allows users to connect, join chat rooms/hubs, and exchange messages instantly in a web interface.
 
