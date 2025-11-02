@@ -52,17 +52,21 @@ namespace ChatApp.Services
             return BCrypt.Net.BCrypt.Verify(password, hash);
         }
 
-        //public async Task SetConnectionAsync(string userId, string connectionId)
-        //{
-        //    var update = Builders<User>.Update.Set(u => u.ConnectionId, connectionId).Set(u => u.IsOnline, true);
-        //    await _users.UpdateOneAsync(u => u.Id == userId, update);
-        //}
+        public async Task<List<object>> GetAllOnlineUsersAsync()
+        {
+            var filter = Builders<User>.Filter.Ne(u => u.ConnectionId, null);
+            var projection = Builders<User>.Projection.Include(u => u.Id).Include(u => u.Username);
 
-        //public async Task SetOfflineByConnectionAsync(string connectionId)
-        //{
-        //    var update = Builders<User>.Update.Set(u => u.IsOnline, false).Unset(u => u.ConnectionId);
-        //    await _users.UpdateOneAsync(u => u.ConnectionId == connectionId, update);
-        //}
+            var results = await _users.Find(filter)
+                              .Project(u => new
+                              {
+                                  id = u.Id,
+                                  username = u.Username
+                              })
+                              .ToListAsync();
+
+            return results.Cast<object>().ToList();
+        }
 
         public async Task UpdateConnectionIdAsync(string userId, string connectionId)
         {
@@ -81,9 +85,9 @@ namespace ChatApp.Services
             return await _users.Find(u => u.ConnectionId == connectionId).FirstOrDefaultAsync();
         }
 
-        public async Task<User?> AuthenticateAsync(string email, string password)
+        public async Task<User?> AuthenticateAsync(string username, string password)
         {
-            var user = await _users.Find(u => u.Email == email).FirstOrDefaultAsync();
+            var user = await _users.Find(u => u.Username == username).FirstOrDefaultAsync();
             if (user != null && BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
                 return user;
 

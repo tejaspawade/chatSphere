@@ -21,13 +21,10 @@ namespace ChatApp.Hubs
             if (!string.IsNullOrEmpty(userId))
             {
                 await _userService.UpdateConnectionIdAsync(userId, Context.ConnectionId);
-                var user = await _userService.GetByIdAsync(userId);
-                if (user != null)
-                {
-                    await Clients.All.SendAsync("UserConnected", user.Username);
-                }
             }
-            await base.OnConnectedAsync();
+
+            var allUsers = await _userService.GetAllOnlineUsersAsync();
+            await Clients.All.SendAsync("UserConnected", allUsers);
         }
 
         public override async Task OnDisconnectedAsync(Exception? exception)
@@ -36,10 +33,12 @@ namespace ChatApp.Hubs
             if (user != null)
             {
                 await _userService.ClearConnectionIdAsync(user.Id);
-                await Clients.All.SendAsync("UserDisconnected", user.Username);
             }
-            await base.OnDisconnectedAsync(exception);
+
+            var allUsers = await _userService.GetAllOnlineUsersAsync();
+            await Clients.All.SendAsync("UserDisconnected", allUsers);
         }
+
 
         public async Task SendMessage(string userName, string message)
         {
@@ -59,13 +58,13 @@ namespace ChatApp.Hubs
             }
         }
 
-        private async Task LoadMessageHistory()
+        public async Task LoadMessageHistory()
         {
             var messages = await _chatService.GetPublicMessagesAsync();
             await Clients.Caller.SendAsync("LoadMessageHistory", messages);
         }
 
-        private async Task LoadPrivateChat(string userId1, string userId2)
+        public async Task LoadPrivateChat(string userId1, string userId2)
         {
             var messages = await _chatService.GetPrivateMessagesAsync(userId1, userId2);
             await Clients.Caller.SendAsync("LoadPrivateChat", messages);

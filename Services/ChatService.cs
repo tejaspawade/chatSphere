@@ -6,12 +6,14 @@ namespace ChatApp.Services
     public class ChatService
     {
         private readonly IMongoCollection<Message> _messages;
+        private readonly UserService _userService;
 
-        public ChatService(IConfiguration config)
+        public ChatService(IConfiguration config, UserService userService)
         {
             var client = new MongoClient(config["MongoDB:ConnectionString"]);
             var db=client.GetDatabase(config["MongoDB:DatabaseName"]);
             _messages = db.GetCollection<Message>(config["MongoDB:MessagesCollection"]);
+            _userService = userService;
         }
         public async Task<Message> SaveMessageAsync(string userName, string room, string content)
         {
@@ -27,10 +29,13 @@ namespace ChatApp.Services
 
         public async Task<Message> SavePrivateMessageAsync(string senderId, string receiverId, string content)
         {
+            var sender = await _userService.GetByIdAsync(senderId);
+
             var message = new Message
             {
                 SenderId = senderId,
                 ReceiverId = receiverId,
+                UserName = sender?.Username ?? "Unknown",
                 Content = content,
                 IsPrivate = true
             };

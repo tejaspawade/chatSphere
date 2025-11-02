@@ -100,3 +100,4 @@ D:\Projects\ChatApp\obj\Debug\net9.0\refint\ChatApp.dll
 D:\Projects\ChatApp\obj\Debug\net9.0\ChatApp.pdb
 D:\Projects\ChatApp\obj\Debug\net9.0\ChatApp.genruntimeconfig.cache
 D:\Projects\ChatApp\obj\Debug\net9.0\ref\ChatApp.dll
+D:\Projects\ChatApp\obj\Debug\net9.0\ChatApp.sourcelink.json

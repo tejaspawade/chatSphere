@@ -29,9 +29,16 @@ namespace ChatApp.Controllers
                 return View();
             }
 
-            await _userService.RegisterAsync(user.Username, user.Email, user.PasswordHash);
+            await _userService.RegisterAsync(user.Username, user.Email, user.Password);
             return RedirectToAction("Login");
         }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> Login(string username, string password)

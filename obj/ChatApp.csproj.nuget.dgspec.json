@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\ChatApp\\ChatApp.csproj": {}
+    "D:\\Chrome Downloads\\ChatApp (2)\\ChatApp\\ChatApp.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\ChatApp\\ChatApp.csproj": {
+    "D:\\Chrome Downloads\\ChatApp (2)\\ChatApp\\ChatApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\ChatApp\\ChatApp.csproj",
+        "projectUniqueName": "D:\\Chrome Downloads\\ChatApp (2)\\ChatApp\\ChatApp.csproj",
         "projectName": "ChatApp",
-        "projectPath": "D:\\Projects\\ChatApp\\ChatApp.csproj",
-        "packagesPath": "C:\\Users\\Tejas.Pawade\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\ChatApp\\obj\\",
+        "projectPath": "D:\\Chrome Downloads\\ChatApp (2)\\ChatApp\\ChatApp.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\Chrome Downloads\\ChatApp (2)\\ChatApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Tejas.Pawade\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://promob-dev.pkgs.visualstudio.com/_packaging/Promob/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
@@ -39,27 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "dependencies": {
-            "BCrypt.Net-Next": {
-              "target": "Package",
-              "version": "[4.0.3, )"
-            },
-            "MongoDB.Driver": {
-              "target": "Package",
-              "version": "[3.5.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -71,15 +50,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
