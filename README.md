@@ -33,6 +33,7 @@
 - **Configuration**: `appsettings.json`, `appsettings.Development.json`  
 - **Structure**: MVC architecture (Controllers, Hubs, Models, Services)  
 
+
 ## Getting Started
 
 ### Prerequisites
@@ -57,17 +58,13 @@
    ```bash
    dotnet run --project path/to/ChatApp.csproj
 
+## Project Structure
 
- ## Project Structure
-  ```bash
-  chatSphere/
-  ├── Controllers/        # MVC Controllers  
-  ├── Hubs/               # SignalR hubs  
-  ├── Models/             # Domain/data models  
-  ├── Services/           # Business logic and abstractions  
-  ├── Views/              # Front-end views (HTML/CSS/JS)  
-  ├── Properties/  
-  ├── wwwroot/            # Static assets (css/js/images)  
-  ├── ChatApp.csproj  
-  └── Program.cs  
+- **Controllers/** – MVC Controllers  
+- **Hubs/** – SignalR hubs  
+- **Models/** – Domain/data models  
+- **Services/** – Business logic and abstractions  
+- **Views/** – Front-end views (HTML/CSS/+JS)  
+- **wwwroot/** – Static assets (css/js/images)  
+- **Program.cs** – Entry point  
 
