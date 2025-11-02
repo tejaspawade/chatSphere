@@ -59,12 +59,16 @@
    dotnet run --project path/to/ChatApp.csproj
 
 ## Project Structure
-
-- **Controllers/** – MVC Controllers  
-- **Hubs/** – SignalR hubs  
-- **Models/** – Domain/data models  
-- **Services/** – Business logic and abstractions  
-- **Views/** – Front-end views (HTML/CSS/+JS)  
-- **wwwroot/** – Static assets (css/js/images)  
-- **Program.cs** – Entry point  
+  ```bash
+  chatSphere/
+  ├── Controllers/        # MVC Controllers  
+  ├── Hubs/               # SignalR hubs  
+  ├── Models/             # Domain/data models  
+  ├── Services/           # Business logic and abstractions  
+  ├── Views/              # Front-end views (HTML/CSS/JS)  
+  ├── Properties/  
+  ├── wwwroot/            # Static assets (css/js/images)  
+  ├── ChatApp.csproj  
+  └── Program.cs  
+ 
 
