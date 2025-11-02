@@ -14,8 +14,18 @@
 - [Project Structure](#project-structure)  
 
 ## Demo / Screenshot
+-Login Page
+<img width="1750" height="925" alt="Screenshot 2025-11-02 173428" src="https://github.com/user-attachments/assets/ae4ffc11-669c-4ef4-bf0a-55c389b7d7a8" />
 
-*(Add screenshots or link to a live demo if available)*
+-Register Page
+<img width="1678" height="875" alt="Screenshot 2025-11-02 173439" src="https://github.com/user-attachments/assets/37de19c5-a07e-4884-93f4-2d1a1b057570" />
+
+-Chat Page(User1)
+<img width="1858" height="960" alt="Screenshot 2025-11-02 173859" src="https://github.com/user-attachments/assets/1eb150e9-59a8-4b8c-ba94-20d21258fe81" />
+
+-Chat Page(User2)
+<img width="1866" height="970" alt="Screenshot 2025-11-02 173913" src="https://github.com/user-attachments/assets/dde7b3f2-6002-4024-81ce-79bb7fead17a" />
+
 
 ## Features
 
